@@ -22,16 +22,16 @@ WPBuoy Endpoint Manager gives you a clear view of every endpoint on your site an
 Every REST API endpoint from WordPress core, plugins, and themes in one organized view — grouped by namespace, with a count of how many are currently disabled.
 
 **Block endpoints instantly**
-Toggle any endpoint off and it returns a 403. No code, no rules, no guesswork. One click. Requires an active Pro license.
+Toggle any endpoint off and it returns a 403. No code, no rules, no guesswork. One click.
 
 **Preview before you block**
-Click the preview icon on any static endpoint to fetch its live REST API response in an inline modal — without leaving the admin. Know exactly what you're disabling before you disable it.
+Click the preview icon on any endpoint to fetch its live REST API response in an inline modal — without leaving the admin. For dynamic routes, the modal fills in parameter values for you. Know exactly what you're disabling before you disable it.
 
 **Search and filter your endpoints**
 Find any endpoint instantly with keyboard search (Ctrl/Cmd+F) and result highlighting. Filter by status, route type, method, or namespace to focus on what matters.
 
 **Security logging**
-Every blocked request is logged with IP address, endpoint, user agent, and timestamp — so you always know what's being probed. Filter logs by IP, endpoint, or date range. Logs auto-clean after 30 days.
+Every blocked request is logged with IP address, endpoint, user agent, and timestamp — so you always know what's being probed. Filter logs by IP, endpoint, or date range. Logs auto-clean after 30 days by default (adjustable from 7 to 90 days).
 
 **Clean and accessible**
 Built to WordPress admin standards. Fully keyboard-navigable with screen reader support.
@@ -44,9 +44,7 @@ Agencies hardening client sites. Developers locking down staging environments. S
 
 WPBuoy Endpoint Manager Pro adds:
 
-* Endpoint blocking with a configurable response code and message (requires license)
-* Dynamic route support with regex pattern matching
-* Interactive preview modal for dynamic endpoints (auto-resolves default parameter values)
+* Configurable block response — choose the status code and message that blocked requests return
 * Global rate limiting — cap the total number of REST API requests per time window
 * Per-endpoint rate limiting — set independent limits on individual routes
 * IP Block List — manual blocking, auto-block IPs that exceed rate limits, and an allowlist for trusted IPs
@@ -79,7 +77,7 @@ The Block Editor relies on several `/wp/v2/` REST API routes. Review those endpo
 
 = Can I manage endpoints from plugins and themes? =
 
-Yes. The plugin shows all registered static REST API endpoints, including those from plugins and themes.
+Yes. The plugin shows all registered REST API endpoints, static and dynamic, including those from plugins and themes.
 
 = Does this plugin work with WordPress multisite? =
 
@@ -95,7 +93,7 @@ Yes. All toggles are reversible — just re-enable any endpoint from the admin s
 
 = Do I need a license to use this plugin? =
 
-No. Viewing, searching, filtering, previewing endpoints, and reviewing security logs are all available for free. Endpoint blocking and Pro features require an active license.
+No. Viewing, searching, filtering, previewing endpoints (static and dynamic), blocking endpoints, and reviewing security logs are all available for free. Pro features such as custom block responses, rate limiting, and IP blocking require an active license.
 
 == Screenshots ==
 
